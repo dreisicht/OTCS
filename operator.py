@@ -2,6 +2,7 @@ import bpy
 
 
 def create_colection(search_tag):
+    # creating new collection, if collection with same name exists skip step
     if search_tag not in bpy.data.collections:
         col = bpy.data.collections.new(search_tag)
         bpy.context.scene.collection.children.link(col)
@@ -10,6 +11,7 @@ def create_colection(search_tag):
 
 
 def move(search_tag, target_collection, main_collection):
+    # move objects from main collection into target collection, checking object name
     for ob in bpy.data.collections[main_collection].objects:
         # print("ob: ", ob, "ob.name: ", ob.name)
         # print("ob.name: ", ob.name, "search_tag: ", search_tag)
@@ -23,10 +25,9 @@ def move(search_tag, target_collection, main_collection):
 
 
 def sort(main_collection, search_tag):
+    # execute sorting for one tag
     target_collection = create_colection(search_tag)
     move(search_tag, target_collection, main_collection)
-
-
 
 
 
