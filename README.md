@@ -1,2 +1,2 @@
-# sort_into_collections
+# OTCS
 Blender addon for sorting objects by names into collections
