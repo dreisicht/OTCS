@@ -29,6 +29,10 @@ def sort(main_collection, search_tag):
     target_collection = create_colection(search_tag)
     move(search_tag, target_collection, main_collection)
 
+def main(main_collection, search_tag_list):
+    pass
+    # for tag in search_tag_list:
+            # sort(main_collection, tag)
 
 
 class SortObjectsToCollections(bpy.types.Operator):
@@ -42,12 +46,12 @@ class SortObjectsToCollections(bpy.types.Operator):
     def poll(cls, context):
         return context.scene is not None
 
-    def execute(main_collection, search_tag_list):
+    def execute(self, context):
     # main function
-        print(context.mysearchtags)
-        # for tag in search_tag_list:
-            # sort(main_collection, tag)
+        print(bpy.context.scene.mysearchtags)
         return {'FINISHED'}
+
+
 
 
 
