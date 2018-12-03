@@ -33,8 +33,8 @@ def sort(main_collection, search_tag):
 
 class SortObjectsToCollections(bpy.types.operator):
     """Sort objects into collections"""
-    bl_idname = "scene.render_copy_settings"
-    bl_label = "Render: Copy Settings"
+    bl_idname = "object._sortobjectstocollections"
+    bl_label = "#SortObjectsToCollections"
     bl_option = {'REGISTER', 'UNDO'}
 
 
@@ -44,8 +44,10 @@ class SortObjectsToCollections(bpy.types.operator):
 
     def execute(main_collection, search_tag_list):
     # main function
-    for tag in search_tag_list:
-        sort(main_collection, tag)
+        for tag in search_tag_list:
+            sort(main_collection, tag)
+        return {'FINISHED'}
+
 
 
 # print("START TEST")

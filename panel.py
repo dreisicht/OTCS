@@ -8,6 +8,6 @@ class PanelClassName(bpy.types.Panel):
     bl_context = "object"
 
     def draw(self, context):
-        layout = self.layout
-        
+        col = self.layout.column(align = True)
+        col.prop(context.scene, "my_string_prop")
         
