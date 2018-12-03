@@ -44,8 +44,9 @@ class SortObjectsToCollections(bpy.types.Operator):
 
     def execute(main_collection, search_tag_list):
     # main function
-        for tag in search_tag_list:
-            sort(main_collection, tag)
+        print(context.mysearchtags)
+        # for tag in search_tag_list:
+            # sort(main_collection, tag)
         return {'FINISHED'}
 
 

@@ -1,8 +1,8 @@
 import bpy
 
 class PanelClassName(bpy.types.Panel):
-    bl_idname = "OTCS"
-    bl_label = "OTCS"
+    bl_idname = "SortObjectsToCollections"
+    bl_label = "Sort objects to collections"
     bl_space_type = "PROPERTIES"
     bl_region_type = "WINDOW"
     bl_context = "object"
@@ -10,3 +10,4 @@ class PanelClassName(bpy.types.Panel):
     def draw(self, context):
         layout = self.layout
         layout.prop(context.scene, "mysearchtags", text="")
+        layout.operator("scene.sortobjectstocollections", text="Start Sorting")
