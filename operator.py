@@ -27,10 +27,7 @@ def sort(main_collection, search_tag):
     move(search_tag, target_collection, main_collection)
 
 
-def main(main_collection, search_tag_list):
-    # main function
-    for tag in search_tag_list:
-        sort(main_collection, tag)
+
 
 
 class SortObjectsToCollections(bpy.types.operator):
@@ -38,7 +35,18 @@ class SortObjectsToCollections(bpy.types.operator):
     bl_idname = "scene.render_copy_settings"
     bl_label = "Render: Copy Settings"
     bl_option = {'REGISTER', 'UNDO'}
-    
+
+
+    @classmethod
+    def poll(cls, context):
+        return context.scene is not None
+
+    def execute(main_collection, search_tag_list):
+    # main function
+    for tag in search_tag_list:
+        sort(main_collection, tag)
+
+
 # print("START TEST")
 # for ob in bpy.data.collections["new_import"].objects:
     # print(ob.name)
