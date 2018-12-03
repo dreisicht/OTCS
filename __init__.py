@@ -17,7 +17,7 @@ bl_info = {
     "description" : "",
     "blender" : (2, 80, 0),
     "location" : "Object Properties",
-    "warning" : "",
+    # "warning" : "",
     "category" : "Generic"
 }
 
@@ -31,14 +31,4 @@ def register():
 def unregister():
     auto_load.unregister()
 
-class PanelClassName(bpy.types.Panel):
-    bl_idname = "OTCS"
-    bl_label = "OTCS"
-    bl_space_type = "PROPERTIES"
-    bl_region_type = "WINDOW"
-    bl_context = "object"
 
-    def draw(self, context):
-        layout = self.layout
-        
-        

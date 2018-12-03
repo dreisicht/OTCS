@@ -32,6 +32,13 @@ def main(main_collection, search_tag_list):
     for tag in search_tag_list:
         sort(main_collection, tag)
 
+
+class SortObjectsToCollections(bpy.types.operator):
+    """Sort objects into collections"""
+    bl_idname = "scene.render_copy_settings"
+    bl_label = "Render: Copy Settings"
+    bl_option = {'REGISTER', 'UNDO'}
+    
 # print("START TEST")
 # for ob in bpy.data.collections["new_import"].objects:
     # print(ob.name)
