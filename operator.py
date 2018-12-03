@@ -33,7 +33,7 @@ def sort(main_collection, search_tag):
 
 class SortObjectsToCollections(bpy.types.Operator):
     """Sort objects into collections"""
-    bl_idname = "object._sortobjectstocollections"
+    bl_idname = "scene.sortobjectstocollections"
     bl_label = "#SortObjectsToCollections"
     bl_option = {'REGISTER', 'UNDO'}
 

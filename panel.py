@@ -8,6 +8,5 @@ class PanelClassName(bpy.types.Panel):
     bl_context = "object"
 
     def draw(self, context):
-        col = self.layout.column(align = True)
-        col.prop(context.scene, "my_string_prop")
-        
+        layout = self.layout
+        layout.prop(context.scene, "mysearchtags", text="")

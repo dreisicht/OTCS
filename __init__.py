@@ -27,8 +27,10 @@ auto_load.init()
 
 def register():
     auto_load.register()
+    bpy.types.Scene.mysearchtags = bpy.props.StringProperty()
 
 def unregister():
     auto_load.unregister()
+    del bpy.types.Scene.mysearchtags 
 
 
