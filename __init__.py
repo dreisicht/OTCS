@@ -36,3 +36,4 @@ def unregister():
     auto_load.unregister()
     del bpy.types.Scene.mysearchtags 
     del bpy.types.Scene.maincollection
+
