@@ -58,19 +58,3 @@ class SortObjectsToCollections(bpy.types.Operator):
         report_text = 'Moved ' + str(moved) + ' objects. Did not move ' + str(not_moved) + ' objects.'
         self.report({'INFO'}, report_text)
         return {'FINISHED'}
-
-
-
-
-
-# print("START TEST")
-# for ob in bpy.data.collections["new_import"].objects:
-    # print(ob.name)
-# print("END TEST")
-
-# search_tag_list = list()
-# search_tag_list.append("decke")
-# search_tag_list.append("sichtbeton")
-# search_tag_list.append("trennbeh")
-# print(search_tag_list)
-# main('new_import', search_tag_list)
