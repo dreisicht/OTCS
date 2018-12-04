@@ -14,8 +14,8 @@ def move(search_tag, target_collection, main_collection):
     # move objects from main collection into target collection, checking object name
     for ob in bpy.data.collections[main_collection].objects:
         # print("ob: ", ob, "ob.name: ", ob.name)
-        # print("ob.name: ", ob.name, "search_tag: ", search_tag)
-        # print(search_tag in ob.name)
+        print("search_tag: ", search_tag, "ob.name: ", ob.name)
+        print(search_tag in ob.name)
         if search_tag in ob.name:
             # print(target_collection)
             try:
@@ -30,9 +30,9 @@ def sort(main_collection, search_tag):
     move(search_tag, target_collection, main_collection)
 
 def main(main_collection, search_tag_list):
-    pass
-    # for tag in search_tag_list:
-            # sort(main_collection, tag)
+    # call sorting for every tag
+    for tag in search_tag_list:
+            sort(main_collection, tag)
 
 
 class SortObjectsToCollections(bpy.types.Operator):
@@ -47,10 +47,11 @@ class SortObjectsToCollections(bpy.types.Operator):
         return context.scene is not None
 
     def execute(self, context):
-    # main function
-        search_tag_list = bpy.context.scene.mysearchtags.split(",")
-        print(main_collection)
-        print(search_tag_list)
+        search_tag_list = bpy.context.scene.mysearchtags.split(", ")
+        main_collection = bpy.context.scene.maincollection
+        print("search tag list: ", search_tag_list)
+        print("maincollection: ", bpy.types.Scene.maincollection)
+        main(main_collection, search_tag_list)
         return {'FINISHED'}
 
 
