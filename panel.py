@@ -10,4 +10,5 @@ class PanelClassName(bpy.types.Panel):
     def draw(self, context):
         layout = self.layout
         layout.prop(context.scene, "mysearchtags", text="")
+        layout.prop(context.scene, "maincollection", text="")
         layout.operator("scene.sortobjectstocollections", text="Start Sorting")

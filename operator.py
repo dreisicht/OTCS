@@ -48,7 +48,9 @@ class SortObjectsToCollections(bpy.types.Operator):
 
     def execute(self, context):
     # main function
-        print(bpy.context.scene.mysearchtags)
+        search_tag_list = bpy.context.scene.mysearchtags.split(",")
+        print(main_collection)
+        print(search_tag_list)
         return {'FINISHED'}
 
 

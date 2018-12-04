@@ -15,9 +15,10 @@ import bpy
 bl_info = {
     "name" : "Sort Objects into Collections",
     "author" : "Peter Baintner",
-    "description" : "",
+    "description" : "Sorts objects into new collections depending from search results",
     "blender" : (2, 80, 0),
     "location" : "Object Properties",
+    "version" : (0, 0, 1),
     # "warning" : "",
     "category" : "Generic"
 }
@@ -29,9 +30,9 @@ auto_load.init()
 def register():
     auto_load.register()
     bpy.types.Scene.mysearchtags = bpy.props.StringProperty()
+    bpy.types.Scene.maincollection = bpy.props.StringProperty()
 
 def unregister():
     auto_load.unregister()
     del bpy.types.Scene.mysearchtags 
-
-
+    del bpy.types.Scene.maincollection
