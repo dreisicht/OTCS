@@ -11,7 +11,7 @@ class PanelClassName(bpy.types.Panel):
         layout = self.layout
         layout.label(text="Master Collection", icon='GROUP')
         layout.prop(context.scene, "maincollection", text="")
-        layout.label(text="Search tags (separate by comma)", icon='ALIGN_LEFT')
+        layout.label(text="Search tags (separate by comma)", icon='VIEWZOOM')
         layout.prop(context.scene, "mysearchtags", text="")
         layout.operator("scene.sortobjectstocollections", text="Start Sorting")
         # self.report({'INFO'}, "Mouse coords are %d %d" % (self.x, self.y))
