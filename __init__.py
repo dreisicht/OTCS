@@ -18,7 +18,7 @@ bl_info = {
     "description" : "Sorts objects into new collections depending from search results",
     "blender" : (2, 80, 0),
     "location" : "Object Properties",
-    "version" : (0, 0, 1),
+    "version" : (0, 0, 2),
     # "warning" : "",
     "category" : "Generic"
 }
